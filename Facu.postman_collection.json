@@ -1,0 +1,545 @@
+{
+	"info": {
+		"_postman_id": "d48ede08-1edf-4e3c-b658-1e254914eb36",
+		"name": "Facu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login - GET",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/login/empleado",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"login",
+						"empleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login - POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/login",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "seba",
+							"disabled": true
+						},
+						{
+							"key": "pass",
+							"value": "123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/empleados",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "mozo",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "mozos",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "activo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/empleados",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"empleados"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/mesas/mod",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "con clientes pagando",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/mesas/mod",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"mesas",
+						"mod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/pedidos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM3OTE3NTYsImV4cCI6MTU0Mzc5ODk1NiwiYXVkIjoiMjJhZjE3OWMzYzFjODc2YmZhMzJiNzAyZjE3ZWZmNDViNzY3NDUzNiIsImRhdGEiOnsiaWQiOjUsIm5vbWJyZSI6Im1vem8iLCJ0aXBvIjoiYmFydGVuZGVyIn0sImFwcCI6IkFQSSBSRVNUIFRQIFNlYmFzdGlhbiBWZWxpeiJ9.oTvXvauMS2Bq8iHQh8e_VNysPeYHvYi3CMnc8sEn4XA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cliente",
+							"value": "seba",
+							"type": "text"
+						},
+						{
+							"key": "mesa",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "pedido",
+							"value": "[{\"id\": 2, \"cantidad\": 2}]",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "id",
+							"value": "12",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "codigo",
+							"value": "12345",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fechaYHoraInicio",
+							"value": "2018-12-04 07:51:37",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fechaYHoraFin",
+							"value": "2018-12-04 08:00:37",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/pedidos",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/pedidos/entregar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigo",
+							"value": "M4BBR",
+							"type": "text"
+						},
+						{
+							"key": "articulo",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "estimado",
+							"value": "2018-12-04 07:51:37",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/pedidos/entregar",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"pedidos",
+						"entregar"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/carta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Sprite 2L",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cerveceria",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/carta",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/caja",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM4MDY2MzcsImV4cCI6MTU0MzgxMzgzNywiYXVkIjoiMjJhZjE3OWMzYzFjODc2YmZhMzJiNzAyZjE3ZWZmNDViNzY3NDUzNiIsImRhdGEiOnsiaWQiOjUsIm5vbWJyZSI6Im1vem8iLCJ0aXBvIjoibW96b3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.wl5sUJ-pYL2vIrWhBBUkBlQfBJ3Xj1eEl0bRRAzIObg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "empleado",
+							"value": "seba",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fecha",
+							"value": "2018-12-03 03:50:40",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "cliente",
+							"value": "sebastian veliz",
+							"type": "text"
+						},
+						{
+							"key": "mesa",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "codigo",
+							"value": "M4BBR",
+							"type": "text"
+						},
+						{
+							"key": "importe",
+							"value": "123",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "estado",
+							"value": "ok",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/caja",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"caja"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/export/pdf/encuestas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/export/pdf/encuestas",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"export",
+						"pdf",
+						"encuestas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://tp-sebastianveliz.000webhostapp.com/cliente/encuesta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDM5NTA3MDEsImV4cCI6MTU0Mzk1NzkwMSwiYXVkIjoiY2ZmMGQ4ZWFhMDI2NDdlYTdhMGQzNzk4ZTNkNWQ5MDUyZTRkZDZlYiIsImRhdGEiOnsiaWQiOjIxLCJub21icmUiOiJhZG1pbiIsInRpcG8iOiJzb2Npb3MifSwiYXBwIjoiQVBJIFJFU1QgVFAgU2ViYXN0aWFuIFZlbGl6In0.qDTH2rZODz6LRIgNAdwf4rWiJXh0sgb3VptgNq05-Sg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoPedido",
+							"value": "M4BBR",
+							"type": "text"
+						},
+						{
+							"key": "mesa",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "restaurante",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cocinero",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "mozo",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "experiencia",
+							"value": "askjhdgasiydgqwjhqwd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/cliente/encuesta",
+					"protocol": "http",
+					"host": [
+						"tp-sebastianveliz",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"cliente",
+						"encuesta"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
