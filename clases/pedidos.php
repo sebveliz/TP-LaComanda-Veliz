@@ -5,10 +5,6 @@ require_once "mesas.php";
 
 class pedidos{
 
-//--------------------------------------------------------------------------------//
-//--ATRIBUTOS    
-
-//public $id;
 public $codigo;
 public $mesa;
 public $idArticulo;
@@ -17,7 +13,7 @@ public $cliente;
 public $cantidad;
 public $importe;
 public $foto;
-public $estado; //"pendientes", "en preparacion", "listo para servir", "entregado"
+public $estado;
 public $estimado;
 public $horaInicio;
 public $horaFin;
@@ -76,7 +72,6 @@ public function InsertarUno()
         $consulta->bindParam(':codigo', $this->codigo, PDO::PARAM_STR);
         $consulta->bindParam(':mesa', $this->mesa, PDO::PARAM_STR);
         $consulta->bindParam(':idArticulo',$this->idArticulo, PDO::PARAM_INT);
-        // $consulta->bindParam(':idEmpleado',$this->idEmpleado, PDO::PARAM_INT);
         $consulta->bindParam(':cliente', $this->cliente, PDO::PARAM_STR);
         $consulta->bindParam(':cantidad', $this->cantidad, PDO::PARAM_STR);
         $consulta->bindParam(':importe', $this->importe, PDO::PARAM_STR);
@@ -86,12 +81,6 @@ public function InsertarUno()
         $consulta->execute();		
         return $objetoAccesoDato->RetornarUltimoIdInsertado();
 }
-
-
-      
-    
-
-
 
 public function BorrarId($id){
 
@@ -103,28 +92,7 @@ public function BorrarId($id){
 				$consulta->bindParam(':id',$id, PDO::PARAM_INT);		
 				$retorno = $consulta->execute();
 				return $consulta->rowCount();
-    
- 
 }
-
-
-/*public function Modificarestado()
-{
-        
-       $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-       $consulta =$objetoAccesoDato->RetornarConsulta("
-           update pedidos 
-           set estado=:estado,
-           estimado= :estimado,
-           idEmpleado= :idEmpleado
-           WHERE id=:id");
-       $consulta->bindParam(':id',$this->id, PDO::PARAM_INT);
-       $consulta->bindParam(':estado',$this->estado, PDO::PARAM_STR);
-       $consulta->bindParam(':estimado', $this->estimado, PDO::PARAM_STR);
-       $consulta->bindParam(':idEmpleado', $this->idEmpleado, PDO::PARAM_STR);
-       return $consulta->execute();   
-     
-}*/
 
 public function TraerId($id){
     $retorno;
@@ -191,7 +159,6 @@ public function verificarPedido($mesa){
     return $retorno;
 }
 
-//--TRAER
 public function obtenerTodos($fecha)
 {
     $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
@@ -322,13 +289,8 @@ public function obtenerFacturadoEntreFechas($fInicio, $fFin)
 
     }
 
-
-   
-    ///Traer codigo mesa
     public function traerMesa($fecha)
     {
-
-   
         $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
         $consulta =$objetoAccesoDato->RetornarConsulta("SELECT p.id as idpedido, p.mesa as mesa,p.estado as estado,p.cliente as cliente,c.descripcion as articulo,p.cantidad as cant,p.codigo as codigo,p.foto as foto,e.nombre AS empleado ,p.estimado as estimado,p.horaInicio as inicio,p.horaFin as fin FROM pedidos as p ,carta as c, empleados as e WHERE p.idArticulo=c.id AND e.id=p.idEmpleado AND p.horaInicio >= '$fecha 00:00:00' AND p.horaInicio <= '$fecha 23:59:59' ");
         
@@ -336,8 +298,6 @@ public function obtenerFacturadoEntreFechas($fInicio, $fFin)
         return $consulta->fetchAll();	
     }
     
-    
-    ///Tomar pedido
     public function TomarPedido()
     {
 
@@ -471,9 +431,6 @@ public function obtenerFacturadoEntreFechas($fInicio, $fFin)
         else
             return 0;
     } 
-
-
-
 }
 
 ?>

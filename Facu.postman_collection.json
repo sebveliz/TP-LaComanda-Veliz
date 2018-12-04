@@ -168,7 +168,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://tp-sebastianveliz.000webhostapp.com/mesas/mod",
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/mesas/edit",
 					"protocol": "http",
 					"host": [
 						"tp-sebastianveliz",
@@ -177,7 +177,7 @@
 					],
 					"path": [
 						"mesas",
-						"mod"
+						"edit"
 					]
 				}
 			},
@@ -237,20 +237,18 @@
 						},
 						{
 							"key": "fechaYHoraInicio",
-							"value": "2018-12-04 07:51:37",
-							"type": "text",
-							"disabled": true
+							"value": "2018-12-03 07:51:37",
+							"type": "text"
 						},
 						{
 							"key": "fechaYHoraFin",
-							"value": "2018-12-04 08:00:37",
-							"type": "text",
-							"disabled": true
+							"value": "2018-12-05 08:00:37",
+							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://tp-sebastianveliz.000webhostapp.com/pedidos",
+					"raw": "http://tp-sebastianveliz.000webhostapp.com/pedidos/facturado",
 					"protocol": "http",
 					"host": [
 						"tp-sebastianveliz",
@@ -258,7 +256,8 @@
 						"com"
 					],
 					"path": [
-						"pedidos"
+						"pedidos",
+						"facturado"
 					]
 				}
 			},

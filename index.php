@@ -30,24 +30,24 @@ $app->group('/login', function ()
         $this->post('/empleado', \empleadosApi::class . ':traerLogsPorEmpleado');//xxxx
     })->add(\MWparaAutentificar::class . ':VerificarSocios'); //xxxx
 
-    $this->post('', \empleadosApi::class . ':loguearse'); //usuario y password xxx
+    $this->post('', \empleadosApi::class . ':loguearse'); // xxx
 });
 
 
 $app->group('/empleados', function () {
     $this->get('', \empleadosApi::class . ':traerTodos'); //xxxxxxxxx
-    $this->post('', \empleadosApi::class . ':CargarUno');//recibe codigo xxxxxx
-    $this->post('/del', \empleadosApi::class . ':BorrarUno'); //xxxxxxxxxx
-    $this->post('/mod', \empleadosApi::class . ':ModificarUno'); //xxxxxxx
+    $this->post('', \empleadosApi::class . ':CargarUno');// xxxxxx
+    $this->post('/delete', \empleadosApi::class . ':BorrarUno'); //xxxxxxxxxx
+    $this->post('/edit', \empleadosApi::class . ':ModificarUno'); //xxxxxxx
 })->add(\MWparaAutentificar::class . ':VerificarSocios');
 
 $app->group('/mesas', function () 
 {
     $this->get('', \mesasApi::class . ':traerTodos'); //xxxxxxxxxxx
-    $this->get('/{codigo}', \mesasApi::class . ':traerUno'); // REVISAR PARA QUE SIRVE POR ID!!!!
+    $this->get('/{codigo}', \mesasApi::class . ':traerUno'); // xxxxxxxxxxxxxxxxxx
     $this->post('', \mesasApi::class . ':CargarUno'); //xxxxxxxxxxx
-    $this->post('/del', \mesasApi::class . ':BorrarUno');//recibe el codigo //xxxxxxxxx
-    $this->post('/mod', \mesasApi::class . ':ModificarUno');//recibe el codigo //xxxxxxx
+    $this->post('/delete', \mesasApi::class . ':BorrarUno'); //xxxxxxxxx
+    $this->post('/edit', \mesasApi::class . ':ModificarUno');//xxxxxxx
 
 })->add(\MWparaAutentificar::class . ':VerificarMozos');
 
@@ -56,8 +56,8 @@ $app->group('/pedidos', function ()
 {
     $this->get('', \pedidosApi::class . ':traerTodos'); //xxxxx
     $this->post('', \pedidosApi::class . ':CargarUno'); //xxxxx
-    $this->post('/del', \pedidosApi::class . ':BorrarUno')->add(\MWparaAutentificar::class . ':VerificarMozos'); //xxxx
-    $this->post('/mod', \pedidosApi::class . ':ModificarUno');
+    $this->post('/delete', \pedidosApi::class . ':BorrarUno')->add(\MWparaAutentificar::class . ':VerificarMozos'); //xxxx
+    $this->post('/edit', \pedidosApi::class . ':ModificarUno');
     $this->post('/atender', \pedidosApi::class . ':atenderPedido'); //xxxxx
     $this->post('/entregar', \pedidosApi::class . ':entregarPedido')->add(\MWparaAutentificar::class . ':VerificarMozos'); //xxxxx
     $this->post('/facturado', \pedidosApi::class . ':facturadoEntreFechas');
@@ -68,8 +68,8 @@ $app->group('/carta', function ()
 {
     $this->get('', \cartaApi::class . ':traerTodos'); //XXXXXXX
     $this->post('', \cartaApi::class . ':CargarUno'); //XXXXXXX
-    $this->post('/del', \cartaApi::class . ':BorrarUno'); //XXXXX
-    $this->post('/mod', \cartaApi::class . ':ModificarUno'); //XXXXX
+    $this->post('/delete', \cartaApi::class . ':BorrarUno'); //XXXXX
+    $this->post('/edit', \cartaApi::class . ':ModificarUno'); //XXXXX
 
 })->add(\MWparaAutentificar::class . ':VerificarSocios');
 
@@ -84,7 +84,7 @@ $app->group('/caja', function ()
 $app->group('/cliente', function () 
 {
     $this->get('', \cartaApi::class . ':traerTodos'); //xxxxxx
-    $this->post('/tiempo', \pedidosApi::class . ':tiempoPedido'); //xxxx
+    $this->post('/tiempoPedido', \pedidosApi::class . ':tiempoPedido'); //xxxx
     $this->post('/encuesta', \encuestaApi::class . ':CargarUno');
 });
 

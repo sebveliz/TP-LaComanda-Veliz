@@ -9,7 +9,6 @@ class AccesoDatos
         try { 
             $this->objetoPDO = new PDO('mysql:host=localhost;dbname=id8093992_tp_prog3_veliz;charset=utf8', 'id8093992_root', '123456', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             //$this->objetoPDO = new PDO('mysql:host=localhost:3306;dbname=tp_prog3_veliz;charset=utf8', 'root', '', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            //$this->objetoPDO = new PDO('mysql:host=localhost:3306;dbname=tp_otro;charset=utf8', 'root', '', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
             $this->objetoPDO->exec("SET CHARACTER SET utf8");
             } 
         catch (PDOException $e) { 
